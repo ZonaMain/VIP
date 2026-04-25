@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M56NSDX133"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M56NSDX133');
+</script>
+  
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+// Pixel LAMA (Winner - 1 Minggu)
+fbq('init', '1932445587362971'); 
+
+// Pixel Riya (Backup - Silakan ganti XXXXXXXX dengan ID Pixel Baru Bapak)
+fbq('init', '1436027614431556');
+
+// Pixel Adshop (Backup - Silakan ganti XXXXXXXX dengan ID Pixel Baru Bapak)
+fbq('init', '4326148464326560');  
+
+// Pixel NUSTAIL (Backup - Silakan ganti XXXXXXXX dengan ID Pixel Baru Bapak)
+fbq('init', '4326148464326560'); 
+
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1932445587362971&ev=PageView&noscript=1"/>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1436027614431556&ev=PageView&noscript=1"/>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4326148464326560&ev=PageView&noscript=1"/>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=826487699895755&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portal Akses Member VIP</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#111;color:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:min(1200px,92%);margin:auto;padding-left:16px;padding-right:16px}
+
+header{position:sticky;top:0;background:linear-gradient(0deg,#000,#444);border-bottom:1px solid rgba(255,255,255,.08);z-index:1000}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:5px 0}
+.logo{color:gold;font-weight:700;font-size:22px}
+.menu{display:flex;gap:20px;list-style:none}
+
+.btn{
+  padding:12px 26px;
+  border-radius:999px;
+  font-weight:700;
+  display:inline-block;
+  border:1px solid #d8d8d8;
+  background:#1a1a1a;
+  color:#ffffff;
+  transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.btn-gold{
+  background:linear-gradient(135deg,#c9961f,#f0c35e);
+  color:#111111;
+  border-color:#f0c35e;
+}
+.btn-green{
+  background:linear-gradient(135deg,#239653,#29cc6b);
+  color:#111111;
+  border-color:#29cc6b;
+  animation:pulseBtn 0.8s ease-in-out infinite;
+}
+
+@keyframes pulseBtn{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.12)}
+  100%{transform:scale(1)}
+}
+.btn-gold:hover{
+  background:linear-gradient(135deg,#ffea96,#ffcf33);
+  color:#000000;
+  border-color:#ffcf33;
+}
+.btn-green:hover{
+  background:linear-gradient(135deg,#76f0aa,#32d978);
+  color:#000000;
+  border-color:#32d978;
+}
+
+section{padding:16px 0}
+
+/* Countdown Promo section sticky */
+#promo-countdown{
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 999;
+  padding: 5px 0;
+}
+#promo-countdown h2 {
+  position: sticky;
+  top: 0;
+  background: #111; /* Make the background consistent with the rest of the page */
+  z-index: 999; /* Ensure it's on top of other elements */
+  padding: 5px 0; /* Optional, adjust padding for spacing */
+}
+
+#promo-banner{padding:0 0 4px}
+
+.promo-banner{max-width:860px;margin:auto;text-align:center}
+.promo-banner img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;max-width:520px;margin:auto;display:block}
+
+.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.bonus-card,.faq-item{
+  background:#1a1a1a;
+  border:1px solid rgba(255,255,255,.08);
+  padding:24px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.countdown{display:flex;justify-content:center;gap:18px;margin:8px;flex-wrap:wrap}
+.count-box{
+  min-width:90px;
+  padding:10px;
+  border-radius:14px;
+  text-align:center;
+  background:linear-gradient(0deg,#111,#444);
+  border:1px solid #555;
+}
+.count-number{
+  font-size:28px;
+  font-weight:700;
+  color:#ffcc00;
+  display:block;
+  margin-bottom:6px;
+}
+.count-label{
+  font-size:12px;
+  letter-spacing:1px;
+  color:#aaa;
+  text-transform:uppercase;
+}
+
+#testimonials{padding-top:8px;padding-bottom:8px}
+.testimonial-wrap{overflow:hidden;margin-top:4px;padding:0 8px}
+.testimonial-track{
+  display:flex;
+  gap:24px;
+  width:max-content;
+  animation:marquee 28s linear infinite;
+  will-change:transform;
+}
+.testimonial-card{
+  width:320px;
+  min-height:230px;
+  padding:24px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#2f2f2f,#1e1e1e);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+  flex:0 0 auto;
+}
+.stars{color:#ffd54a;font-size:22px;letter-spacing:2px;margin-bottom:14px}
+.testimonial-text{font-style:italic;font-size:15px;line-height:1.7;color:#f1f1f1;min-height:90px}
+.testimonial-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}
+.testimonial-name{color:#2ecc71;font-weight:700}
+.testimonial-location{color:#aaa;font-size:14px;white-space:nowrap}
+@keyframes marquee{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+
+footer{border-top:1px solid rgba(255,255,255,.08);padding:30px;text-align:center;color:#aaa;margin-top:60px}
+
+@media(max-width:900px){
+  .bonus-grid,.faq-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:700px){
+  section{padding:24px 0}
+  .container{width:100%;padding-left:14px;padding-right:14px}
+  .nav{flex-wrap:wrap;gap:12px;justify-content:center}
+  .logo{width:100%;text-align:center;font-size:20px}
+  .menu{width:100%;justify-content:center;flex-wrap:wrap;gap:12px;font-size:13px}
+  .btn{padding:12px 18px;font-size:14px}
+  section{padding:56px 0}
+  .promo-banner{max-width:100%}
+  .promo-banner img{max-width:100%;width:100%;aspect-ratio:1/1;border-radius:18px}
+  .bonus-grid,.faq-grid{grid-template-columns:1fr;gap:16px}
+  .bonus-card,.faq-item{padding:18px}
+  .countdown{gap:10px}
+  .count-box{min-width:60px;padding:8px 8px}
+  .count-number{font-size:20px}
+  .testimonial-wrap{padding:0 4px}
+  .testimonial-track{gap:14px;animation:marquee 24s linear infinite}
+  .testimonial-card{width:260px;min-height:auto;padding:18px}
+  .stars{font-size:22px;margin-bottom:10px}
+  .testimonial-text{font-size:14px;line-height:1.6;min-height:auto}
+  .testimonial-meta{flex-direction:column;align-items:flex-start;gap:4px}
+  footer{padding:24px 14px}
+}
+
+.activity-popup{
+  position:fixed;
+  left:16px;
+  bottom:50px;
+  background:linear-gradient(135deg,#ffd54a,#ff9f1a);
+  border:1px solid #ffb347;
+  border-radius:5px;
+  padding:5px;
+  font-size:11px;
+  color:#111111;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .3s ease, transform .3s ease;
+  z-index:9999;
+}
+.activity-popup.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.cta-section{padding:10px 0}
+.trust-bar{padding:4px 0}
+.trust-bar span{margin:0 4px}
+
+/* jackpot glow effect */
+#jackpot-value{background:#333;padding:10px;border:2px dotted gold;border-radius:50px;}
+
+#jackpot-value.glow{
+  border:2px dotted #fff;
+  text-shadow:0 0 8px #f3c76b,0 0 16px #f3c76b,0 0 24px #ffd54a;
+  transition:text-shadow .25s ease;
+}
+
+/* Member Counter Styling */
+#member-counter {
+  background-color: #222;
+  padding: 5px 0;
+}
+
+#member-counter h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#member-count {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff0;
+  margin-top: 0px;
+}
+
+#member-counter p {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 0px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 1 Logo -->
+<header>
+<div class="container nav" style="justify-content:center">
+<div class="logo">KOMUNITAS VIP</div>
+</div>
+</header>
+
+<div id="deposit-timer" style="background: #fdfae6; border: 2px dashed #b8860b; color: #333; padding: 10px; text-align: center; border-radius: 8px; margin: 10px 0;">
+    <p style="margin: 0; font-size: 14px; font-weight: bold; color: #b8860b;">
+        KUOTA BERHASIL DIAMANKAN!
+    </p>
+    <p style="margin: 0px 0 5px 0; font-size: 12px; color: #666;">
+        Segera Klaim Sebelum Masa Berlaku Berakhir:
+    </p>
+    <div style="font-size: 28px; font-weight: 900; color: #d9534f; display: flex; justify-content: center; align-items: baseline; letter-spacing: -1px;">
+        <span id="min-sec">19:59</span><span id="ms">.59</span>
+    </div>
+</div>
+
+<script>
+// Fungsi Timer Baru yang Bergerak Cepat (Milidetik)
+function startFastTimer(durationSeconds) {
+    let totalMs = durationSeconds * 1000;
+    let endTime = Date.now() + totalMs;
+    const displayMain = document.getElementById('min-sec');
+    const displayMs = document.getElementById('ms');
+
+    function update() {
+        let remaining = endTime - Date.now();
+        if (remaining <= 0) {
+            endTime = Date.now() + totalMs; // Auto-reset
+            remaining = totalMs;
+        }
+
+        let m = Math.floor(remaining / 60000);
+        let s = Math.floor((remaining % 60000) / 1000);
+        let ms = Math.floor((remaining % 1000) / 10);
+
+        if(displayMain) displayMain.innerText = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        if(displayMs) displayMs.innerText = `.${String(ms).padStart(2, '0')}`;
+        
+        requestAnimationFrame(update);
+    }
+    update();
+}
+
+// Jalankan semua fungsi saat window load
+window.onload = function () {
+    startFastTimer(1199); // Memulai timer dari 19:59
+    
+    // Fungsi lainnya tetap berjalan
+    setInterval(showPopup, 4500);
+    setInterval(() => { 
+        const increase = Math.floor(Math.random() * 700) + 100; 
+        jackpotCurrent += increase; 
+        jackpotEl.textContent = formatRupiah(jackpotCurrent); 
+        jackpotEl.classList.add('glow'); 
+        setTimeout(()=>{ jackpotEl.classList.remove('glow'); },250); 
+    }, 500);
+    setInterval(updateMemberCount, 1000);
+};
+
+// ... sisa kode popup dan jackpot Anda di bawah sini ...
+</script>
+
+<!-- 3 Hero Banner -->
+<section id="promo-banner">
+<div class="container">
+<div class="promo-banner">
+<img src="Komunitas.webp" fetchpriority="high" alt="Komunitas VIP" />
+</div>
+</div>
+</section>
+  
+<!-- 5 CTA Daftar -->
+<section class="cta-section">
+<div class="container" style="text-align:center">
+<a href="https://urlpsjshorten.com/newvip" class="btn btn-green" target="_blank">DAFTAR SEKARANG</a>
+</div>
+</section>
+
+
+
+<!-- 7 Jackpot Counter -->
+<section id="jackpot-section" style="padding:5px 0">
+<div class="container" style="text-align:center">
+<h2 style="font-size:20px";margin-bottom:5px;>ASET HARI INI</h2>
+<div id="jackpot-value" style="font-size:24px;color:#f3c76b;font-weight:700">Rp 0</div>
+</div>
+</section>
+  
+<!-- 9 Clear Section -->
+<section style="height:20px"></section>
+
+<!-- 10 Popup Activity -->
+<div id="activity-popup" class="activity-popup"></div>
+
+<!-- 11 Sticky CTA -->
+<a href="https://urlpsjshorten.com/newvip" 
+   onclick="fbq('track', 'Lead', {value: 10000, currency: 'IDR'});"
+   target="_blank" 
+   style="position:fixed;left:0;right:0;bottom:0;background:linear-gradient(0deg,#105f0a,#29cc6b);color:#111;font-weight:700;text-align:center;padding:14px;z-index:9998;text-decoration:none">
+   DAFTAR SEKARANG
+</a>
+
+<script>
+
+// countdown promo 10 menit
+let duration = 10 * 60 * 1000; // 10 menit dalam ms
+let end = new Date().getTime() + duration;
+
+setInterval(() => {
+    let now = new Date().getTime();
+    let diff = end - now;
+
+    // Auto-reset jika waktu habis (biar urgensi tetap ada buat user baru)
+    if (diff <= 0) {
+        end = new Date().getTime() + duration;
+        diff = duration;
+    }
+
+    let h = Math.floor(diff / (1000 * 60 * 60));
+    let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    // Update tampilan (pastikan ID 'h', 'm', 's' ada di HTML Anda)
+    if(document.getElementById('h')) document.getElementById('h').innerText = String(h).padStart(2, '0');
+    if(document.getElementById('m')) document.getElementById('m').innerText = String(m).padStart(2, '0');
+    if(document.getElementById('s')) document.getElementById('s').innerText = String(s).padStart(2, '0');
+}, 500);
+
+
+// popup activity
+const popup=document.getElementById('activity-popup');
+const messages=[ "1 user baru bergabung", "Eth****97 melakukan withdraw Rp475.000", "Adi****87 melakukan deposit Rp200.000", "Riz****an melakukan withdraw Rp300.000", "Den****ot melakukan deposit Rp150.000", "And****da melakukan withdraw Rp850.000", "Han****er melakukan deposit Rp100.000", "Bag****45 melakukan withdraw Rp550.000", "Fer****di melakukan deposit Rp250.000", "Jef****uz melakukan withdraw Rp1.050.000", "Raj****ki melakukan deposit Rp200.000", "Hok****u5 melakukan withdraw Rp600.000", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung"];
+function showPopup(){
+const text=messages[Math.floor(Math.random()*messages.length)];
+popup.textContent=text;
+popup.classList.add('show');
+setTimeout(()=>{popup.classList.remove('show');},3000);
+}
+setTimeout(showPopup,1200);
+setInterval(showPopup,4500);
+
+// animated jackpot
+const jackpotEl = document.getElementById('jackpot-value');
+let jackpotCurrent = 3128071695;
+function formatRupiah(num){ return 'Rp ' + Math.floor(num).toLocaleString('id-ID'); }
+jackpotEl.textContent = formatRupiah(jackpotCurrent);
+setInterval(() => { const increase = Math.floor(Math.random() * 700) + 100; jackpotCurrent += increase; jackpotEl.textContent = formatRupiah(jackpotCurrent); jackpotEl.classList.add('glow'); setTimeout(()=>{ jackpotEl.classList.remove('glow'); },250); },500);
+
+// Member Counter
+let memberCount = 1217; // Set initial member count to 1,217
+document.getElementById('member-count').innerText = memberCount; // Display initial value
+
+function updateMemberCount() {
+  memberCount += Math.floor(Math.random() * 9) + 1;  // Increment by a random number between 1 and 9
+  document.getElementById('member-count').innerText = memberCount;
+}
+
+// Update the member count every second (1000ms)
+setInterval(updateMemberCount, 1000);
+
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"cbde39b8ba0c442d9ddc941b95486086","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
