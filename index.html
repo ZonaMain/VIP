@@ -38,9 +38,10 @@ fbq('track', 'PageView');
 </noscript>
 <!-- End Meta Pixel Code -->
   
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Portal Akses 2</title>
+<title>Portal Member</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -93,7 +94,6 @@ header{position:sticky;top:0;background:linear-gradient(0deg,#000,#444);border-b
 
 section{padding:16px 0}
 
-/* Countdown Promo section sticky */
 #promo-countdown{
   position: sticky;
   top: 0;
@@ -104,9 +104,9 @@ section{padding:16px 0}
 #promo-countdown h2 {
   position: sticky;
   top: 0;
-  background: #111; /* Make the background consistent with the rest of the page */
-  z-index: 999; /* Ensure it's on top of other elements */
-  padding: 5px 0; /* Optional, adjust padding for spacing */
+  background: #111;
+  z-index: 999;
+  padding: 5px 0;
 }
 
 #promo-banner{padding:0 0 4px}
@@ -231,34 +231,97 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:30px;text-align:center
 .trust-bar{padding:4px 0}
 .trust-bar span{margin:0 4px}
 
-/* jackpot glow effect */
 #jackpot-value{background:#333;padding:10px;border:2px dotted gold;border-radius:50px;}
-
 #jackpot-value.glow{
   border:2px dotted #fff;
   text-shadow:0 0 8px #f3c76b,0 0 16px #f3c76b,0 0 24px #ffd54a;
   transition:text-shadow .25s ease;
 }
 
-/* Member Counter Styling */
+/* ===== MEMBER COUNTER SECTION ===== */
+#member-counter-section {
+  padding: 14px 0 10px;
+}
+.member-counter-wrap {
+  max-width: 480px;
+  margin: auto;
+  background: linear-gradient(135deg, #1a1a1a 60%, #222 100%);
+  border: 1px solid rgba(255, 200, 0, 0.25);
+  border-radius: 20px;
+  padding: 18px 24px 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.member-counter-wrap::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, rgba(255,204,0,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.member-counter-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+.member-counter-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: #2ecc71;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: blinkDot 1s ease-in-out infinite;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+@keyframes blinkDot {
+  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(46,204,113,0.5)}
+  50%{opacity:0.5;box-shadow:0 0 0 5px rgba(46,204,113,0)}
+}
+.member-counter-number {
+  font-size: 46px;
+  font-weight: 900;
+  color: #ffcc00;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  display: block;
+  text-shadow: 0 0 18px rgba(255,204,0,0.35);
+  font-variant-numeric: tabular-nums;
+}
+.member-counter-sublabel {
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 4px;
+}
+.member-counter-sublabel strong {
+  color: #2ecc71;
+}
+@media(max-width:700px){
+  .member-counter-wrap{padding:14px 14px 12px;border-radius:16px}
+  .member-counter-number{font-size:36px}
+}
+/* ===== END MEMBER COUNTER ===== */
+
 #member-counter {
   background-color: #222;
   padding: 5px 0;
 }
-
 #member-counter h2 {
   font-size: 20px;
   font-weight: 700;
   color: #fff;
 }
-
 #member-count {
-  font-size: 48px;
+  font-size: 30px;
   font-weight: 700;
   color: #ff0;
   margin-top: 0px;
 }
-
 #member-counter p {
   color: #aaa;
   font-size: 14px;
@@ -270,18 +333,13 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:30px;text-align:center
 <body>
 
 <!-- 1 Logo -->
-<header>
-<div class="container nav" style="justify-content:center">
-<div class="logo">KOMUNITAS VIP</div>
-</div>
-</header>
 
 <div id="deposit-timer" style="background: #fdfae6; border: 2px dashed #b8860b; color: #333; padding: 10px; text-align: center; border-radius: 8px; margin: 10px 0;">
     <p style="margin: 0; font-size: 14px; font-weight: bold; color: #b8860b;">
-        KUOTA VIP BERHASIL DIAMANKAN!
+        KUOTA BONUS DEPOSIT 100% DIAMANKAN!
     </p>
     <p style="margin: 0px 0 5px 0; font-size: 12px; color: #666;">
-        Segera Klaim Sebelum Masa Berlaku Berakhir:
+        Segera Daftar Dan Deposit Sebelum Masa Berlaku Berakhir:
     </p>
     <div style="font-size: 28px; font-weight: 900; color: #d9534f; display: flex; justify-content: center; align-items: baseline; letter-spacing: -1px;">
         <span id="min-sec">19:59</span><span id="ms">.59</span>
@@ -289,7 +347,6 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:30px;text-align:center
 </div>
 
 <script>
-// Fungsi Timer Baru yang Bergerak Cepat (Milidetik)
 function startFastTimer(durationSeconds) {
     let totalMs = durationSeconds * 1000;
     let endTime = Date.now() + totalMs;
@@ -299,27 +356,21 @@ function startFastTimer(durationSeconds) {
     function update() {
         let remaining = endTime - Date.now();
         if (remaining <= 0) {
-            endTime = Date.now() + totalMs; // Auto-reset
+            endTime = Date.now() + totalMs;
             remaining = totalMs;
         }
-
         let m = Math.floor(remaining / 60000);
         let s = Math.floor((remaining % 60000) / 1000);
         let ms = Math.floor((remaining % 1000) / 10);
-
         if(displayMain) displayMain.innerText = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
         if(displayMs) displayMs.innerText = `.${String(ms).padStart(2, '0')}`;
-        
         requestAnimationFrame(update);
     }
     update();
 }
 
-// Jalankan semua fungsi saat window load
 window.onload = function () {
-    startFastTimer(1199); // Memulai timer dari 19:59
-    
-    // Fungsi lainnya tetap berjalan
+    startFastTimer(1199);
     setInterval(showPopup, 4500);
     setInterval(() => { 
         const increase = Math.floor(Math.random() * 700) + 100; 
@@ -330,36 +381,86 @@ window.onload = function () {
     }, 500);
     setInterval(updateMemberCount, 1000);
 };
-
-// ... sisa kode popup dan jackpot Anda di bawah sini ...
 </script>
 
 <!-- 3 Hero Banner -->
 <section id="promo-banner">
 <div class="container">
 <div class="promo-banner">
-<img src="ArenaGame.webp" fetchpriority="high" alt="Komunitas VIP" />
+<img src="https://episentrumresto.com/PSJ058.webp" fetchpriority="high" alt="Komunitas VIP" />
 </div>
 </div>
 </section>
+
+<!-- MEMBER COUNTER SECTION -->
+<section id="member-counter-section">
+  <div class="container">
+    <div class="member-counter-wrap">
+      <div class="member-counter-label">
+        <span class="member-counter-dot"></span>Member Aktif Hari Ini
+      </div>
+      <span class="member-counter-number" id="member-count">1.217</span>
+    </div>
+  </div>
+</section>
+<!-- END MEMBER COUNTER SECTION -->
   
 <!-- 5 CTA Daftar -->
 <section class="cta-section">
 <div class="container" style="text-align:center">
-<a href="https://urlpsjshorten.com/bonusvip" class="btn btn-green" target="_blank">DAFTAR SEKARANG</a>
+<a href="https://urlpsjshorten.com/newvip" class="btn btn-green" target="_blank">DAFTAR SEKARANG</a>
 </div>
 </section>
 
+<!-- 8 Testimoni -->
+<section id="testimonials">
+<div class="container">
+<div class="testimonial-wrap">
+<div class="testimonial-track">
 
+<div class="testimonial-card">
+<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<div class="testimonial-text">Gila, gua daftar 100rb langsung dapet bonus member baru 100%! Baru main bentar udah dikasih petir terus2an. Ga nyampe 15 menit, 550rb cair!! hahaha..</div>
+<div class="testimonial-meta"><span class="testimonial-name">Andi S4nz</span><span class="testimonial-location">Jakarta</span></div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<div class="testimonial-text">Awalnya ragu, tapi liat bonus new member gede langsung coba. Gak nyangka langsung dapet JP. Gokil, modal 50rb bisa jadi 350. </div>
+<div class="testimonial-meta"><span class="testimonial-name">Santi MamaMuda</span><span class="testimonial-location">Bandung</span></div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<div class="testimonial-text">Gw daftar hari ini, langsung dapet bonus awal, eh langsung dapet hasil. RTP nya kacau, pindah2 game aja masih gacor hehe</div>
+<div class="testimonial-meta"><span class="testimonial-name">Yoga Pratama</span><span class="testimonial-location">Surabaya</span></div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<div class="testimonial-text">Bonus new membernya gak main-main, langsung nambah saldo dan bikin cepet menang. Sering2 aja min, biar gw cepet kaya!</div>
+<div class="testimonial-meta"><span class="testimonial-name">Rudi Uban</span><span class="testimonial-location">Medan</span></div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<div class="testimonial-text">Iseng daftar karena bonus awal, eh malah lanjut ampe WD melulu. wkwkwk asli, beneran di kasih bukti, bukan janji doang</div>
+<div class="testimonial-meta"><span class="testimonial-name">Begeng 6okz</span><span class="testimonial-location">Makassar</span></div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
 
 <!-- 7 Jackpot Counter -->
 <section id="jackpot-section" style="padding:5px 0">
 <div class="container" style="text-align:center">
-<h2 style="font-size:20px";margin-bottom:5px;>ASET HARI INI</h2>
+<h2 style="font-size:20px;margin-bottom:5px;">PROGRESSIVE JACKPOT</h2>
 <div id="jackpot-value" style="font-size:24px;color:#f3c76b;font-weight:700">Rp 0</div>
 </div>
 </section>
-  
+ 
 <!-- 9 Clear Section -->
 <section style="height:20px"></section>
 
@@ -367,7 +468,7 @@ window.onload = function () {
 <div id="activity-popup" class="activity-popup"></div>
 
 <!-- 11 Sticky CTA -->
-<a href="https://urlpsjshorten.com/bonusvip" 
+<a href="https://urlpsjshorten.com/newvip" 
    onclick="fbq('track', 'Lead', {value: 10000, currency: 'IDR'});"
    target="_blank" 
    style="position:fixed;left:0;right:0;bottom:0;background:linear-gradient(0deg,#105f0a,#29cc6b);color:#111;font-weight:700;text-align:center;padding:14px;z-index:9998;text-decoration:none">
@@ -376,32 +477,24 @@ window.onload = function () {
 
 <script>
 
-// countdown promo 10 menit
-let duration = 10 * 60 * 1000; // 10 menit dalam ms
+let duration = 10 * 60 * 1000;
 let end = new Date().getTime() + duration;
 
 setInterval(() => {
     let now = new Date().getTime();
     let diff = end - now;
-
-    // Auto-reset jika waktu habis (biar urgensi tetap ada buat user baru)
     if (diff <= 0) {
         end = new Date().getTime() + duration;
         diff = duration;
     }
-
     let h = Math.floor(diff / (1000 * 60 * 60));
     let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     let s = Math.floor((diff % (1000 * 60)) / 1000);
-
-    // Update tampilan (pastikan ID 'h', 'm', 's' ada di HTML Anda)
     if(document.getElementById('h')) document.getElementById('h').innerText = String(h).padStart(2, '0');
     if(document.getElementById('m')) document.getElementById('m').innerText = String(m).padStart(2, '0');
     if(document.getElementById('s')) document.getElementById('s').innerText = String(s).padStart(2, '0');
 }, 500);
 
-
-// popup activity
 const popup=document.getElementById('activity-popup');
 const messages=[ "1 user baru bergabung", "Eth****97 melakukan withdraw Rp475.000", "Adi****87 melakukan deposit Rp200.000", "Riz****an melakukan withdraw Rp300.000", "Den****ot melakukan deposit Rp150.000", "And****da melakukan withdraw Rp850.000", "Han****er melakukan deposit Rp100.000", "Bag****45 melakukan withdraw Rp550.000", "Fer****di melakukan deposit Rp250.000", "Jef****uz melakukan withdraw Rp1.050.000", "Raj****ki melakukan deposit Rp200.000", "Hok****u5 melakukan withdraw Rp600.000", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung"];
 function showPopup(){
@@ -413,23 +506,23 @@ setTimeout(()=>{popup.classList.remove('show');},3000);
 setTimeout(showPopup,1200);
 setInterval(showPopup,4500);
 
-// animated jackpot
 const jackpotEl = document.getElementById('jackpot-value');
 let jackpotCurrent = 3128071695;
 function formatRupiah(num){ return 'Rp ' + Math.floor(num).toLocaleString('id-ID'); }
 jackpotEl.textContent = formatRupiah(jackpotCurrent);
 setInterval(() => { const increase = Math.floor(Math.random() * 700) + 100; jackpotCurrent += increase; jackpotEl.textContent = formatRupiah(jackpotCurrent); jackpotEl.classList.add('glow'); setTimeout(()=>{ jackpotEl.classList.remove('glow'); },250); },500);
 
-// Member Counter
-let memberCount = 1217; // Set initial member count to 1,217
-document.getElementById('member-count').innerText = memberCount; // Display initial value
+// Member Counter — synced dengan display baru
+let memberCount = 1217;
+function formatMemberCount(n) {
+  return n.toLocaleString('id-ID');
+}
+document.getElementById('member-count').innerText = formatMemberCount(memberCount);
 
 function updateMemberCount() {
-  memberCount += Math.floor(Math.random() * 9) + 1;  // Increment by a random number between 1 and 9
-  document.getElementById('member-count').innerText = memberCount;
+  memberCount += Math.floor(Math.random() * 2) + 1;
+  document.getElementById('member-count').innerText = formatMemberCount(memberCount);
 }
-
-// Update the member count every second (1000ms)
 setInterval(updateMemberCount, 1000);
 
 </script>
